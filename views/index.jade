@@ -1,0 +1,51 @@
+extends layout
+
+block content
+    .page
+        .title #{title}
+        .content
+            img(src="images/logo.png", title="logo.png")
+
+    .page
+        .title #{title}简介
+        .content.
+            Subversion是一个自由，开源的版本控制系统。在Subversion管理下，文件和目录可以超越时空。Subversion将文件存放在中心版本库里。这个版本库很像一个普通的文件服务器，不同的是，它可以记录每一次文件和目录的修改情况。这样就可以籍此将数据恢复到以前的版本，并可以查看数据的更改细节。正因为如此，许多人将版本控制系统当作一种神奇的"时间机器"。
+
+
+    .page
+        .title 参考书籍
+        .content
+            a(href="books/版本控制之道-使用Subversion.pdf", class="btn btn-primary intro-shelf") 下载中文版电子书
+            a(href="books/Pragmatic Version Control using Subversion, 2nd Edition.pdf", class="btn intro-shelf") 下载英文版电子书
+            img(src="images/pragmatic_version_control_using_subversion_2nd_edition.jpg",alt="pragmatic_version_control_using_subversion_2nd_edition.jpg", class="pull-right book-image")
+
+    .page
+        .title 下载#{title}客户端TortoiseSVN
+        .content
+            img(src="images/tortoisesvn_logo.png", title="tortoisesvn_logo.png")
+            .pull-right
+                a(href="https://tortoisesvn.net/downloads.html", class="btn intro-shelf") 官网下载
+                a(href="apps/TortoiseSVN-1.9.4.27285-x64-svn-1.9.4.msi", class="btn btn-primary intro-shelf") 本站下载
+
+    .page
+        .title 安装TortoiseSVN
+        .content
+            - var n = 1
+            ul
+                while n <= 7
+                    li
+                        img(src="images/install_0#{n}.png", alt="install_0#{n}.png")
+                    - n++
+
+    .page
+        .title 安装后验证
+        .content
+            p win+r 输入cmd, 打开命令提示符。再在里边输入 svn -h如果成功则出现如下图所示：(后边命令行方式启动svn服务器要用到，如果未找到则需要在 系统|高级系统设置|高级|环境变量|系统变量|Path 值后添加";C:\Program Files\TortoiseSVN\bin")
+            img(src="images/install_08.png", alt="install_08.png")
+
+
+    .page
+        .title 安装后文件管理器鼠标右键变化
+        .content
+            p 在打开的文件管理器，找一文件夹，点击右键会发现弹出菜单多出几项如下图所示
+            img(src="images/install_09.png", alt="install_09.png")
